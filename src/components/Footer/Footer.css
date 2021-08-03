@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background-color: #8a6736;
+  color: #FFEBC9;
+  height: 40px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.social img {
+    height: 25px;
+    cursor: pointer;
+}

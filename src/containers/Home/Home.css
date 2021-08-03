@@ -1,0 +1,15 @@
+.home {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.home h1 {
+    color: rgb(143, 89, 7);
+    margin: 60px auto;
+}
+
+.home img {
+    margin: 25px auto;
+    width: 600px;
+    cursor: pointer;
+}
