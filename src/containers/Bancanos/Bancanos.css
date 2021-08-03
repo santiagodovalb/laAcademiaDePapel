@@ -1,0 +1,46 @@
+.bancanos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mercadoPago {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: lightblue;
+    border-radius: 10px;
+    border: 5px solid;
+    box-shadow: 3px 5px 2px 1px black;
+    height: 150px;
+}
+
+#mpLogo {
+    background-color: transparent;
+    height: 70px;
+
+}
+
+.mercadoPago button {
+    height: 50px;
+    width: 100px;
+    font-size: large;
+    font-weight: 300;
+    font-family: Merriweather, serif;
+    background-color: rgb(84, 137, 155);
+    margin: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.mercadoPago button:hover{
+    border: 2px solid;
+    height: 55px;
+    width: 110px;
+}
+
+.bancanos img {
+    margin: 60px;
+}
