@@ -16,10 +16,15 @@ export default function SingleEntrada({ entradas }) {
         <div>
             {entradas.map(entrada => {
                 return (
-                    <div key={entrada.id} className='entrada'>
-                        <h5>{date(entrada.createdAt)}</h5>
-                        <h1>{entrada.titulo}</h1>
-                        <p>{entrada.contenido}</p>
+                    <div className='entradas'>
+                        <div key={entrada.id} className='singleEntrada'>
+                            <img src={entrada.imagen || 'https://i.stack.imgur.com/y9DpT.jpg'} alt='placeholder' />
+                            <div className='entradaContent'>
+                                <h1>{entrada.titulo}</h1>
+                                <h2>29/09/2021</h2>
+                                <p>{entrada.contenido}</p>
+                            </div>
+                        </div>
                     </div>
                 )
             })}

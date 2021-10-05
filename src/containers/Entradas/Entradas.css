@@ -1,8 +1,79 @@
-.entrada {
-    background-color: #753422ec;
-    padding: 15px 35px;
-    margin: 15px auto;
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+#newsletter {
+    background-color: #ffefd8;
+}
+
+#suscribite {
+    display: flex;
+    justify-content: space-between;
     width: 60%;
-    border-radius: 10px;
-    color: #FFEBC9;
+    margin: 50px auto 0px auto;
+}
+
+#suscribite input {
+    width: 75%;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 25px;
+    padding-left: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    color: #e58586;
+}
+
+#suscribite button {
+    font-family: 'Josefin Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    background-color: #e58586;
+    font-size: 35px;
+    border: none;
+    font-weight: 100;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.banda3 {
+    display: flex;
+    width: 100%;
+    height: 160px;
+    background-image: url('../../assets/fondoMadera.jpeg');
+    background-size: 100% 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px 2px grey;
+    color: white;
+}
+
+.banda3 h1 {
+    font-size: 60px;
+    text-shadow: -1px 1px 2px black;
+}
+
+.entradas {
+    display: flex;
+    justify-content: center;
+}
+
+.singleEntrada {
+    display: flex;
+    margin: 50px auto;
+    width: 80%;
+    padding-bottom: 25px;
+    border-bottom: 2px solid black;
+}
+
+.singleEntrada p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.singleEntrada img {
+    height: 200px;
+    width: 250px;
+    margin: 0 40px;
+    border: 2px solid black;
 }

@@ -16,8 +16,10 @@ export default function Bancanos() {
     }
     
     return (
-        <div className='bancanos'>
-            <img src={aportes} alt='aportes' />
+        <div id='bancanos'>
+            <div className="banda2">
+                <img src={aportes} alt='aportes' />
+            </div>
             <div className='mercadoPago'>
                 <img src={mercadoPago} alt='mercadoPago' id='mpLogo'/>
                 <button type='button' onClick={handleClick} name='100'>$100</button>
