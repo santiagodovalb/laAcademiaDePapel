@@ -23,7 +23,7 @@ export default function Footer() {
     
     return (
         <div className='footer'>
-            <p>La Academia de Papel | contacto: antoniodovalb@gmail.com | 2020. La Boca, Buenos Aires, Argentina</p>
+            <p>la academia de papel ™</p>
             <div className='social'>
             <img src={instagram} onClick={handleClick} name='ig' alt='instagram' />
             <img src={facebook} onClick={handleClick} name='fb' alt='facebook' />

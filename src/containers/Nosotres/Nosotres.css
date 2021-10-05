@@ -1,0 +1,62 @@
+#nosotres {
+    background-color: #ffefd8;
+    padding-bottom: 70px;
+}
+
+#nosotres h3 {
+    width: 50%;
+    margin: 70px auto;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.persona {
+    background-color: #753422ec;
+    border-radius: 10px;
+    width: 60%;
+    padding: 20px;
+    margin: 40px auto;
+    color: #FFEBC9;
+   
+    box-shadow: 10px 10px 2px 1px grey;
+}
+
+.banda {
+    display: flex;
+    width: 100%;
+    height: 160px;
+    background-image: url('../../assets/fondoMadera.jpeg');
+    background-size: 100% 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px 2px grey;
+    color: white;
+}
+
+.banda h1 {
+    font-size: 60px;
+    text-shadow: -1px 1px 2px black;
+}
+
+.persona p {
+    margin: 30px 70px 30px 70px;
+    line-height: 0.8cm;
+    font-size: 25px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.fotos {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}

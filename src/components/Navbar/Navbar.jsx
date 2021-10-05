@@ -1,16 +1,29 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
-import { BsSearch } from "react-icons/bs";
 import logo from "../../assets/logo.png";
-import youtube from "../../assets/youtube.png";
-import donate from "../../assets/donate.png";
-import people from "../../assets/people.png";
-import compu from "../../assets/compu.png";
-import home from '../../assets/home.png'
+import userReducer from "../../state/user";
+import userEvent from "@testing-library/user-event";
+import { useSelector } from "react-redux";
+import { getAuth, signOut } from "firebase/auth";
+import { useHistory } from "react-router";
 
 export default function Navbar() {
+  
   const location = useLocation();
+  const user = useSelector(state => state.user)
+  const auth = getAuth();
+  const history = useHistory()
+
+  const handleSignout = () => {
+    signOut(auth).then(() => {
+      alert('Sign out exitoso')
+      history.push('/')
+    }).catch((error) => {
+      alert('Hubo un error')
+    });
+  }
+
   return (
     <div>
       <div class="topnav">
@@ -18,46 +31,47 @@ export default function Navbar() {
             <img src={logo} alt="logo" id="logo" />
         </Link>
         <div className="links">
-          <Link className={location.pathname === "/" ? "active" : ""} to="/">
-            <img src={home} alt="home" />
-            Home
+          <Link className={location.pathname === "/nosotres" ? "active" : ""} to="/nosotres">
+            
+            NOSOTR3S
           </Link>
-          <Link
-            className={location.pathname === "/blog" ? "active" : ""}
-            to="/blog"
+          <a
+            href="/#aportes"
           >
-            <img src={compu} alt="compu" />
-            Entradas
-          </Link>
+            APORTES
+          </a>
 
-          <Link
-            className={location.pathname === "/videos" ? "active" : ""}
-            to="/videos"
+          <a
+            href="https://la-academia-de-papel.flashcookie.com/" target="_blank"
           >
-            <img src={youtube} alt="youtubeLogo" />
-            Videos
-          </Link>
+           
+            COMPRAS
+          </a>
 
           <Link
             className={location.pathname === "/bancanos" ? "active" : ""}
-            to="/bancanos"
+            to="/newsletter"
           >
-            <img src={donate} alt="donate" />
-            Bancanos
+           
+            NEWSLETTER
           </Link>
 
           <Link
             className={location.pathname === "/about" ? "active" : ""}
-            to="/about"
+            to="/contacto"
           >
-            <img src={people} alt="people" />
-            ¿Quiénes somos?
+          
+            CONTACTO
           </Link>
+          {user.email && <Link
+            className={location.pathname === "/about" ? "active" : ""}
+            to="/nuevaentrada"
+          >
+          
+            NUEVA ENTRADA
+          </Link>}
         </div>
-        <div className="search">
-          <BsSearch />
-          <input type="text"></input>
-        </div>
+        {user.email && <button type='button' onClick={handleSignout}>DESLOGEAR ADMIN</button>}
       </div>
     </div>
   );
