@@ -21,7 +21,7 @@ export default function SingleEntrada({ entradas }) {
                             <img src={entrada.imagen || 'https://i.stack.imgur.com/y9DpT.jpg'} alt='placeholder' />
                             <div className='entradaContent'>
                                 <h1>{entrada.titulo}</h1>
-                                <h3>29/09/2021</h3>
+                                <h3>{entrada.fecha}</h3>
                                 <p>{entrada.contenido}</p>
                             </div>
                         </div>

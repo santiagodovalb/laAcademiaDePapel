@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 .home {
-    background-image: url('../../assets/fondoHome.png');
+    background-image: url('../../assets/fondoMadera.png');
     background-size: 100% 100%;
     height: 800px;
     padding-top: 60px;
     padding-left: 80px;
-    
+    position: relative
+}
+
+.home img {
+    position: absolute; 
+    right: 0; 
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .home a {
@@ -69,76 +77,65 @@
     width: 215px;
 }
 
-.roll-in-left {
-	-webkit-animation: roll-in-left 0.6s ease-out both;
-	        animation: roll-in-left 0.6s ease-out both;
-}
-
-@-webkit-keyframes roll-in-left {
-    0% {
-      -webkit-transform: translateX(-800px) rotate(-540deg);
-              transform: translateX(-800px) rotate(-540deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateX(0) rotate(0deg);
-              transform: translateX(0) rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @keyframes roll-in-left {
-    0% {
-      -webkit-transform: translateX(-800px) rotate(-540deg);
-              transform: translateX(-800px) rotate(-540deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateX(0) rotate(0deg);
-              transform: translateX(0) rotate(0deg);
-      opacity: 1;
-    }
-  }
-
 .bandaAportes {
     display: flex;
     z-index: 1;
     height: 110px;
     width: 100%;
     align-items: center;
-    font-size: 15px;
+    font-size: 25px;
     justify-content: center;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+    padding-top: 10px;
 }
 
 #aportes {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('../../assets/fondoMadera.jpeg');
+    background-image: url('../../assets/fondoMadera.png');
     background-size: 100% 100%;
     width: 100%;
-    height: 270px;
+    height: 370px;
 }
 
 .cajaAportes {
     width: 50%;
-    padding: 0px 250px;
+    text-align: center;
 }
 
 .opcionAporte {
     display: flex;
     cursor: 'pointer';
-    height: 270px;
+    height: 140px;
+    width: 400px;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     background-color: white;
     border-radius: 10px;
-    height: 100px;
     box-shadow: -2px 2px 5px 2px black;
+}
+
+#cafecito h4{
+    
 }
 
 .opcionAporte img {
     height: 55px;
 }
+
+/* @media (min-width: 901px) and (max-width:1300px) {
+    .home {
+        background-image: url('../../assets/fondoTablet.png');
+        
+    }
+} */
+
+/* @media (max-width:1200px) {
+    .home {
+        background-image: url('../../assets/fondoHomeMobile.png');
+        
+    }
+}  */

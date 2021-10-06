@@ -7,6 +7,8 @@ import userEvent from "@testing-library/user-event";
 import { useSelector } from "react-redux";
 import { getAuth, signOut } from "firebase/auth";
 import { useHistory } from "react-router";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../state/user";
 
 export default function Navbar() {
   
@@ -14,10 +16,12 @@ export default function Navbar() {
   const user = useSelector(state => state.user)
   const auth = getAuth();
   const history = useHistory()
+  const dispatch = useDispatch()
 
   const handleSignout = () => {
     signOut(auth).then(() => {
       alert('Sign out exitoso')
+      dispatch(setUser({}))
       history.push('/')
     }).catch((error) => {
       alert('Hubo un error')
@@ -49,7 +53,7 @@ export default function Navbar() {
           </a>
 
           <Link
-            className={location.pathname === "/bancanos" ? "active" : ""}
+            className={location.pathname === "/newsletter" ? "active" : ""}
             to="/newsletter"
           >
            
@@ -57,7 +61,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            className={location.pathname === "/about" ? "active" : ""}
+            className={location.pathname === "/contacto" ? "active" : ""}
             to="/contacto"
           >
           
