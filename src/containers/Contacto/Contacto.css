@@ -39,7 +39,7 @@
 }
 
 #contacto form input {
-    margin: 10px;
+    margin: 15px;
     height: 30px;
     width: 100%;
     font-size: 24px;
@@ -54,7 +54,7 @@
 }
 
 #contacto form textarea {
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 24px;
     padding-left: 10px;
     height: 250px;
