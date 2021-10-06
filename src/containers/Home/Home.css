@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 .home {
-    background-image: url('../../assets/Fondo.jpeg');
+    background-image: url('../../assets/fondoHome.png');
     background-size: 100% 100%;
     height: 800px;
     padding-top: 60px;
     padding-left: 80px;
+    
+}
+
+.home a {
+    text-decoration: none;
 }
 
 .home p {
@@ -11,6 +18,16 @@
     font-size: 40px;
     font-weight: 100;
     width: 60%;
+}
+
+.home button {
+    font-family: 'Josefin Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 26px;
+  font-weight: bolder;
+  border-style: none;
+  cursor: pointer;
 }
 
 #youtube {
@@ -23,12 +40,9 @@
     height: 40px;
     border-radius: 10px;
     box-shadow: -2px 2px 3px 1px black;
+    position: relative;
 }
 
-.home img {
-    width: 600px;
-    cursor: pointer;
-}
 
 .fondo {
     z-index: -1;
@@ -51,8 +65,8 @@
 }
   
 .bandaLogo img {
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 250px;
 }
 
 .roll-in-left {
