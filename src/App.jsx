@@ -14,6 +14,8 @@ import { useEffect } from 'react';
 import { getAuth } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { setUser } from './state/user';
+import Entrada from './containers/Entrada/Entrada';
+import EditEntrada from './containers/Entrada/EditEntrada';
 require('dotenv').config()
 
 
@@ -38,7 +40,9 @@ function App() {
         <Route path='/nosotres' component={Nosotres} />
         <Route path='/aportes' component={Bancanos} />
         <Route path='/compras' component={Entradas} />
-        <Route path='/newsletter' component={Entradas} />
+        <Route exact path='/newsletter' component={Entradas} />
+        <Route path='/newsletter/:id' component={Entrada} />
+        <Route path='/edit/:id' component={EditEntrada} />
         <Route path='/contacto' component={Contacto} />
         <Route path='/admin' component={Admin} />
         <Route path='/nuevaentrada' component={NuevaEntrada} />

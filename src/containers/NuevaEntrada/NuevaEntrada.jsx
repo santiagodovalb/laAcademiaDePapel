@@ -31,6 +31,8 @@ export default function Admin() {
             {user.email ? <form onSubmit={handleSumbit}>
                 <label for="titulo">TITULO</label>
                 <input onChange={handleChange} type="text" name="titulo" />
+                <label for="titulo">AUTORX</label>
+                <input onChange={handleChange} type="text" name="autor" />
                 <label for="titulo">FECHA</label>
                 <input onChange={handleChange} type="text" name="fecha" />
                 <label for="titulo">URL IMAGEN</label>
