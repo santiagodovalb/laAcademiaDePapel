@@ -33,7 +33,9 @@ export default function Home() {
           estudiante o simplemente <br /> un apasionado del mundo y sus
           alrededores (?), <br /> te va a gustar lo que hacemos.
         </p>
-          <button type='button' id='youtube' onClick={handleClick}>ir al canal de youtube</button>
+          <a href="https://www.youtube.com/channel/UCH08pslY37XMeJU3_fSyN1A" target='_blank'>
+          <button type='button' id='youtube'>ir al canal de youtube</button>
+          </a>
           <img src={fondoTransparente} alt='dibujos' />
       </div>
       <div className="bandaAportes">
@@ -49,8 +51,8 @@ export default function Home() {
           >
             <a href='https://cafecito.app/laacademiadepapel' target='_blank'>
             <img src={Cafecito} />
-            </a>
             <h1>Cafecito</h1>
+            </a>
           </div>
           <h4>desde argentina</h4>
         </div>
@@ -63,8 +65,8 @@ export default function Home() {
           >
             <a href='https://www.patreon.com/LaAcademiaDePapel' target='_blank'>
             <img src={Patreon} />
-            </a>
             <h1>Patreon</h1>
+            </a>
           </div>
           <h4>desde cualquier parte</h4>
         </div>
