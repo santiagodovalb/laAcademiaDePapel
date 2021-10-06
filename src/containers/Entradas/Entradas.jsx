@@ -10,7 +10,7 @@ export default function Entradas() {
     useEffect(() => {
         const entradas = collection(db, 'entradas');
         const entradas2 =  getDocs(entradas)
-        .then(entradas => entradas.docs.map(doc => doc.data()))
+        .then(entradas => entradas.docs)
         .then(setEntradas)
     }, [])
 

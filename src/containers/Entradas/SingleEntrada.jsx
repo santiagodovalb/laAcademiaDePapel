@@ -1,28 +1,28 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import './Entradas.css'
 
 export default function SingleEntrada({ entradas }) {
 
-    const date = (fecha) => {
-        let dia = fecha.slice(0, 10);
-        let fechaCorrecta = `${dia.slice(8, 10)}/${dia.slice(
-          5,
-          7
-        )}/${dia.slice(0, 4)}`;
-        return fechaCorrecta;
-      };
+    const data = entradas.map(doc => doc.data())
+    const ids = entradas.map(doc => doc.id)
 
     return (
         <div>
-            {entradas.map(entrada => {
+            {data.map((data, index) => {
                 return (
                     <div className='entradas'>
-                        <div key={entrada.id} className='singleEntrada'>
-                            <img src={entrada.imagen || 'https://i.stack.imgur.com/y9DpT.jpg'} alt='placeholder' />
+                        <div key={data.id} className='singleEntrada'>
+                            <img src={data.imagen || 'https://i.stack.imgur.com/y9DpT.jpg'} alt='placeholder' />
                             <div className='entradaContent'>
-                                <h1>{entrada.titulo}</h1>
-                                <h3>{entrada.fecha}</h3>
-                                <p>{entrada.contenido}</p>
+                                <Link to={`/newsletter/${ids[index]}`}>
+                                    <h1>{data.titulo}</h1>
+                                </Link>
+                                <h3>{data.fecha}</h3>
+                                <Link to={`/newsletter/${ids[index]}`}>
+                                    <p>{data.contenido.slice(0, 100)} <br/>...ver más</p>
+                                </Link>
                             </div>
                         </div>
                     </div>

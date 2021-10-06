@@ -4,6 +4,11 @@
     background-color: #ffefd8;
 }
 
+#newsletter a {
+    text-decoration: none;
+    color: black;
+}
+
 #suscribite {
     display: flex;
     justify-content: space-between;
@@ -73,6 +78,14 @@
 .singleEntrada p {
     font-size: 20px;
     font-weight: bold;
+}
+
+.singleEntrada p:hover {
+    text-decoration: underline;
+}
+
+.singleEntrada h1:hover {
+    text-decoration: underline;
 }
 
 .singleEntrada img {
