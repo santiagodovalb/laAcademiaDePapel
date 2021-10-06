@@ -46,7 +46,9 @@ export default function Home() {
             style={{ cursor: "pointer" }}
             onClick={(e) => handleClick(e)}
           >
+            <a href='https://cafecito.app/laacademiadepapel' target='_blank'>
             <img src={Cafecito} />
+            </a>
             <h1>Cafecito</h1>
           </div>
           <h4>desde argentina</h4>
@@ -58,7 +60,9 @@ export default function Home() {
             style={{ cursor: "pointer" }}
             onClick={handleClick}
           >
+            <a href='https://www.patreon.com/LaAcademiaDePapel' target='_blank'>
             <img src={Patreon} />
+            </a>
             <h1>Patreon</h1>
           </div>
           <h4>desde cualquier parte</h4>

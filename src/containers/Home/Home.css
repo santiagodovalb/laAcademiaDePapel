@@ -15,7 +15,7 @@
 
 .home p {
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 100;
     width: 60%;
 }
@@ -57,16 +57,16 @@
 .bandaLogo {
     display: flex;
     width: 100%;
-    height: 160px;
+    height: 120px;
     background-color: #b24443;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 5px 2px grey;
+    box-shadow: 0px 3123px 5px 2px grey;
 }
   
 .bandaLogo img {
-    height: 150px;
-    width: 250px;
+    height: 110px;
+    width: 215px;
 }
 
 .roll-in-left {
@@ -101,15 +101,14 @@
 
 .bandaAportes {
     display: flex;
-    background-color: #ffefd8;
     z-index: 1;
-    height: 130px;
+    height: 110px;
     width: 100%;
     align-items: center;
+    font-size: 15px;
     justify-content: center;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    box-shadow: 0px 0px 5px 2px grey;
 }
 
 #aportes {
@@ -125,7 +124,6 @@
 .cajaAportes {
     width: 50%;
     padding: 0px 250px;
-    
 }
 
 .opcionAporte {
@@ -137,10 +135,10 @@
     margin: 0 auto;
     background-color: white;
     border-radius: 10px;
-    height: 150px;
+    height: 100px;
     box-shadow: -2px 2px 5px 2px black;
 }
 
 .opcionAporte img {
-    height: 80px;
+    height: 55px;
 }

@@ -13,9 +13,10 @@
 
 #suscribite input {
     width: 75%;
+    height: 35px;
     border: 2px solid black;
     border-radius: 5px;
-    font-size: 25px;
+    font-size: 20px;
     padding-left: 10px;
     font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -28,10 +29,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
     background-color: #e58586;
-    font-size: 35px;
+    font-size: 25px;
     border: none;
     font-weight: 100;
-    height: 50px;
+    height: 40px;
     width: 200px;
     cursor: pointer;
 }
@@ -39,17 +40,16 @@
 .banda3 {
     display: flex;
     width: 100%;
-    height: 160px;
+    height: 120px;
     background-image: url('../../assets/fondoMadera.jpeg');
     background-size: 100% 100%;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 5px 2px grey;
     color: white;
 }
 
 .banda3 h1 {
-    font-size: 60px;
+    font-size: 45px;
     text-shadow: -1px 1px 2px black;
 }
 
@@ -66,14 +66,18 @@
     border-bottom: 2px solid black;
 }
 
+.singleEntrada h1 {
+    font-size: 25px;
+}
+
 .singleEntrada p {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 
 .singleEntrada img {
-    height: 200px;
-    width: 250px;
+    height: 150px;
+    width: 220px;
     margin: 0 40px;
     border: 2px solid black;
 }

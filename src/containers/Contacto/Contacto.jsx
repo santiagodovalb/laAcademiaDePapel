@@ -38,7 +38,6 @@ export default function Contacto() {
                 <textarea onChange={handleChange} name="contenido" placeholder="tu comentario..."/>
                 <button type='submit' style={{float: 'left'}}>ENVIAR </button>
             </form>
-
         </div>
     )
 }
