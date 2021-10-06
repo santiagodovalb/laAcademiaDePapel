@@ -14,9 +14,16 @@
   z-index: 100;
 }
 
-.footer p {
-  margin-left: 50px;
+#webBy{
+  color: grey;
+  margin-left: 5px;
 }
+
+#footerText {
+  display: flex;
+  margin-left: 50px
+}
+
 
 .social {
     display: flex;

@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div>
       <div className="bandaLogo">
-        <img src={Logo} alt="logo" className="roll-in-left" />
+        <img src={Logo} alt="logo" />
       </div>
       <div className="home">
         <p>
@@ -32,8 +32,8 @@ export default function Home() {
           estudiante o simplemente <br /> un apasionado del mundo y sus
           alrededores (?), <br /> te va a gustar lo que hacemos.
         </p>
-        
           <button type='button' id='youtube' onClick={handleClick}>ir al canal de youtube</button>
+          <img src={fondoTransparente} alt='dibujos' />
       </div>
       <div className="bandaAportes">
         <h1>APORTES</h1>
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
           <h4>desde argentina</h4>
         </div>
-        <div className="cajaAportes" style={{ textAlign: "end" }}>
+        <div className="cajaAportes">
           <div
             className="opcionAporte"
             id="patreon"

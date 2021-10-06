@@ -41,7 +41,7 @@
     display: flex;
     width: 100%;
     height: 120px;
-    background-image: url('../../assets/fondoMadera.jpeg');
+    background-image: url('../../assets/fondoMadera.png');
     background-size: 100% 100%;
     align-items: center;
     justify-content: center;
@@ -67,11 +67,11 @@
 }
 
 .singleEntrada h1 {
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .singleEntrada p {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
 }
 

@@ -27,7 +27,10 @@ export default function Footer() {
     
     return (
         <div className='footer'>
-            <p>la academia de papel ™</p>
+            <div id='footerText'>
+                <p>la academia de papel ™ |</p>
+                <p id='webBy'>      diseño: Santiago Doval</p>
+            </div>
             <div className='social'>
             <img src={youtube} onClick={handleClick} name='yt' alt='youtube' />
             <img src={instagram} onClick={handleClick} name='ig' alt='instagram' />
