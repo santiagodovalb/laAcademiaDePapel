@@ -2,8 +2,6 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
-import userReducer from "../../state/user";
-import userEvent from "@testing-library/user-event";
 import { useSelector } from "react-redux";
 import { getAuth, signOut } from "firebase/auth";
 import { useHistory } from "react-router";
@@ -30,10 +28,12 @@ export default function Navbar() {
 
   return (
     <div>
-      <div class="topnav">
-        <Link to='/'>
-            <img src={logo} alt="logo" id="logo" />
-        </Link>
+      <div className="topnav">
+        <div id="logo">
+          <Link to='/'>
+              <img src={logo} alt="logo"  />
+          </Link>
+        </div>
         <div className="links">
           <Link className={location.pathname === "/nosotres" ? "active" : ""} to="/nosotres">
             
@@ -46,7 +46,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="https://la-academia-de-papel.flashcookie.com/" target="_blank"
+            href="https://la-academia-de-papel.flashcookie.com/" target="_blank" rel="noreferrer"
           >
            
             COMPRAS
@@ -55,6 +55,7 @@ export default function Navbar() {
           <Link
             className={location.pathname === "/newsletter" ? "active" : ""}
             to="/newsletter"
+            id='linkNews'
           >
            
             NEWSLETTER

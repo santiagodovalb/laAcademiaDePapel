@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router'
 import emailjs from 'emailjs-com'
 import './Contacto.css'
-const { USER_ID, TEMPLATE_ID} = process.env
 
 export default function Contacto() {
 

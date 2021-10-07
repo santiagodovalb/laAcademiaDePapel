@@ -17,7 +17,7 @@ export default function EditEntrada() {
     useEffect(() => {
         const docRef = doc(db, "entradas", id);
         getDoc(docRef).then((entrada) => setEntrada(entrada.data()));
-      }, [user]);
+      }, [user, id]);
 
     const handleChange = (e) => {
         setEntrada({...entrada, [e.target.name]: e.target.value})
@@ -31,6 +31,27 @@ export default function EditEntrada() {
             alert('Entrada editada')
             history.push('/newsletter')
         })
+    }
+
+    const handleClick = (e) => {
+        let contenido = document.getElementById('contenidoEdit')
+        let text = contenido.value
+        let tag, endTag
+        if (e.target.id === 'negrita') {
+            tag = '<b>'
+            endTag = '</b>'
+        }
+        if (e.target.id === 'italica') {
+            tag = '<i>'
+            endTag = '</i>'
+        }
+        if (e.target.id === 'link') {
+            let link = prompt('Ingresar link')
+            tag = `<a href=${link} target='_blank'>`
+            endTag = '</a>'
+        }
+        contenido.value = text.slice(0, contenido.selectionStart) + tag + text.slice(contenido.selectionStart, contenido.selectionEnd) + endTag + text.slice(contenido.selectionEnd)
+        setEntrada({...entrada, contenido: contenido.value})
     }
 
     return (
@@ -47,8 +68,13 @@ export default function EditEntrada() {
                 <label for="titulo">URL IMAGEN</label>
                 <input onChange={handleChange} type="text" name="imagen" defaultValue={entrada.imagen}/>
                 <label for="contenido">CONTENIDO</label>
-                <textarea onChange={handleChange} name="contenido" rows="20" cols="120" defaultValue={entrada.contenido}/>
-                <button type='submit'>ENVIAR </button>
+                <div id='editButtons'>
+                    <button type='button' id='negrita' onClick={handleClick} className='editText'><strong>B</strong></button>
+                    <button type='button' id='italica' onClick={handleClick} className='editText'><em>i</em></button>
+                    <button type='button' id='link' onClick={handleClick} className='editText'>🔗</button>
+                </div>
+                <textarea onChange={handleChange} id='contenidoEdit' name="contenido" rows="20" cols="120" defaultValue={entrada.contenido}/>
+                <button type='submit' id='submit'>ENVIAR </button>
             </form> : <h1>NO AUTORIZADO</h1>}
         </div>
     )

@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Home.css";
 import Logo from "../../assets/bandaLogoHome.png";
 import Patreon from "../../assets/patreon_logo.svg";
 import Cafecito from "../../assets/cafecito_logo.svg";
 import fondoTransparente from "../../assets/fondoTransparente.png";
 import "animate.css";
-import { Link } from "react-router-dom";
 
 export default function Home() {
   const handleClick = (e) => {
@@ -33,7 +32,7 @@ export default function Home() {
           estudiante o simplemente <br /> un apasionado del mundo y sus
           alrededores (?), <br /> te va a gustar lo que hacemos.
         </p>
-          <a href="https://www.youtube.com/channel/UCH08pslY37XMeJU3_fSyN1A" target='_blank'>
+          <a href="https://www.youtube.com/channel/UCH08pslY37XMeJU3_fSyN1A" target='_blank' rel="noreferrer">
           <button type='button' id='youtube'>ir al canal de youtube</button>
           </a>
           <img src={fondoTransparente} alt='dibujos' />
@@ -49,8 +48,8 @@ export default function Home() {
             style={{ cursor: "pointer" }}
             onClick={(e) => handleClick(e)}
           >
-            <a href='https://cafecito.app/laacademiadepapel' target='_blank'>
-            <img src={Cafecito} />
+            <a href='https://cafecito.app/laacademiadepapel' target='_blank' rel="noreferrer">
+            <img src={Cafecito} alt='cafecito'/>
             <h1>Cafecito</h1>
             </a>
           </div>
@@ -63,8 +62,8 @@ export default function Home() {
             style={{ cursor: "pointer" }}
             onClick={handleClick}
           >
-            <a href='https://www.patreon.com/LaAcademiaDePapel' target='_blank'>
-            <img src={Patreon} />
+            <a href='https://www.patreon.com/LaAcademiaDePapel' target='_blank' rel="noreferrer">
+            <img src={Patreon} alt='patreon'/>
             <h1>Patreon</h1>
             </a>
           </div>

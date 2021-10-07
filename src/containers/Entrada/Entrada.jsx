@@ -16,7 +16,7 @@ export default function Entrada() {
   useEffect(() => {
     const docRef = doc(db, "entradas", id);
     getDoc(docRef).then((entrada) => setEntrada(entrada.data()));
-  }, []);
+  }, [id]);
 
   const handleClick = () => {
     history.push(`/edit/${id}`)
@@ -31,7 +31,7 @@ export default function Entrada() {
       {user.email && <button type='button' onClick={handleClick}>EDITAR ENTRADA</button>}
         <h3>{entrada.fecha}</h3>
         <h3>Por {entrada.autor}</h3>
-        <p>{entrada.contenido}</p>
+        <p dangerouslySetInnerHTML={{ __html: entrada.contenido}}></p>
       </div>
     </div>
   );
