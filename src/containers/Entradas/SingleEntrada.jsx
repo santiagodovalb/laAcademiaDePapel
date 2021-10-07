@@ -1,5 +1,4 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import './Entradas.css'
 
@@ -12,8 +11,8 @@ export default function SingleEntrada({ entradas }) {
         <div>
             {data.map((data, index) => {
                 return (
-                    <div className='entradas'>
-                        <div key={data.id} className='singleEntrada'>
+                    <div key={ids[index]} className='entradas'>
+                        <div className='singleEntrada'>
                             <img src={data.imagen || 'https://i.stack.imgur.com/y9DpT.jpg'} alt='placeholder' />
                             <div className='entradaContent'>
                                 <Link to={`/newsletter/${ids[index]}`}>
@@ -21,7 +20,7 @@ export default function SingleEntrada({ entradas }) {
                                 </Link>
                                 <h3>{data.fecha}</h3>
                                 <Link to={`/newsletter/${ids[index]}`}>
-                                    <p>{data.contenido.slice(0, 100)} <br/>...ver más</p>
+                                    <p dangerouslySetInnerHTML={{ __html: `${data.contenido.slice(0, 200)} ...`}}></p>
                                 </Link>
                             </div>
                         </div>
