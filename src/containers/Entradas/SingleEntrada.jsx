@@ -20,7 +20,7 @@ export default function SingleEntrada({ entradas }) {
                                 </Link>
                                 <h3>{data.fecha}</h3>
                                 <Link to={`/newsletter/${ids[index]}`}>
-                                    <p dangerouslySetInnerHTML={{ __html: `${data.contenido.slice(0, 200)} ...`}}></p>
+                                    <p dangerouslySetInnerHTML={{ __html: `${data.contenido?.slice(0, 200)} ...`}}></p>
                                 </Link>
                             </div>
                         </div>

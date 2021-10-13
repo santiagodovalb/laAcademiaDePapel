@@ -26,6 +26,12 @@ export default function Navbar() {
     });
   }
 
+  const handleClick = () => {
+    const sidebar = document.getElementById('sidebar')
+    sidebar.className = sidebar.className === 'closed' ? 'open' : 'closed'
+    console.log(sidebar.className)
+  }
+
   return (
     <div>
       <div className="topnav">
@@ -33,6 +39,51 @@ export default function Navbar() {
           <Link to='/'>
               <img src={logo} alt="logo"  />
           </Link>
+        </div>
+        <div id='mobileNav' onClick={handleClick}>
+          <h1>☰</h1>
+        </div>
+        <div id='sidebar' className='closed'>
+        <Link className={location.pathname === "/nosotres" ? "active" : ""} to="/nosotres">
+            
+            NOSOTR3S
+          </Link>
+          <a
+            href="/#aportes"
+          >
+            APORTES
+          </a>
+
+          <a
+            href="https://la-academia-de-papel.flashcookie.com/" target="_blank" rel="noreferrer"
+          >
+           
+            COMPRAS
+          </a>
+
+          <Link
+            className={location.pathname === "/newsletter" ? "active" : ""}
+            to="/newsletter"
+            id='linkNews'
+          >
+           
+            NEWSLETTER
+          </Link>
+
+          <Link
+            className={location.pathname === "/contacto" ? "active" : ""}
+            to="/contacto"
+          >
+          
+            CONTACTO
+          </Link>
+          {user.email && <Link
+            className={location.pathname === "/about" ? "active" : ""}
+            to="/nuevaentrada"
+          >
+          
+            NUEVA ENTRADA
+          </Link>}
         </div>
         <div className="links">
           <Link className={location.pathname === "/nosotres" ? "active" : ""} to="/nosotres">

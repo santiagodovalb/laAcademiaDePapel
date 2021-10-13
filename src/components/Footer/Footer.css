@@ -11,7 +11,7 @@
   background-color: white;
   color: black;
   height: 55px;
-  z-index: 100;
+  z-index: 200;
 }
 
 #webBy{
@@ -35,4 +35,33 @@
 .social img {
     height: 35px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 731px) {
+  #footerText {
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+  }
+  
+  #footerText p {
+    width: 100%;
+    margin: 5px 0px;
+    font-size: 13px;
+  }
+
+  #webBy {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .social {
+    justify-content: center;
+    margin: 0px;
+  }
+
+  .social img {
+    height: 25px;
+    margin: 0px 2px;
+  }
 }

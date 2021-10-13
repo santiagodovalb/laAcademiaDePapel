@@ -28,8 +28,8 @@ export default function Footer() {
     return (
         <div className='footer'>
             <div id='footerText'>
-                <p>la academia de papel ™ |</p>
-                <p id='webBy'>      diseño: Santiago Doval</p>
+                <p>la academia de papel™</p>
+                <p id='webBy'>diseño: Santiago Doval</p>
             </div>
             <div className='social'>
             <img src={youtube} onClick={handleClick} name='yt' alt='youtube' />

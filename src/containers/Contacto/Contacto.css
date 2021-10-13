@@ -76,3 +76,9 @@
     width: 200px;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 731px) {
+  .bandaContacto {
+    margin-top: 60px;
+  }
+}
