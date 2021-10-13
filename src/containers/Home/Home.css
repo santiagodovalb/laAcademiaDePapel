@@ -1,36 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 
 .home {
-    background-image: url('../../assets/fondoMadera.png');
-    background-size: 100% 100%;
-    height: 800px;
-    padding-top: 60px;
-    padding-left: 80px;
-    position: relative
+  background-image: url("../../assets/fondoMadera.png");
+  background-size: 100% 100%;
+  height: 800px;
+  padding-top: 60px;
+  padding-left: 80px;
+  position: relative;
 }
 
 .home img {
-    position: absolute; 
-    right: 0; 
-    bottom: 0;
-    max-width: 100%;
-    max-height: 100%;
-    z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
 }
 
 .home a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .home p {
-    color: white;
-    font-size: 30px;
-    font-weight: 100;
-    width: 60%;
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+  width: 60%;
 }
 
-.home button {
-    font-family: 'Josefin Sans', sans-serif;
+#youtube {
+  font-family: "Josefin Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 26px;
@@ -38,112 +38,140 @@
   border-style: none;
   cursor: pointer;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6383a;
+  color: white;
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: -2px 2px 3px 1px black;
+  position: relative;
 }
-
-#youtube {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #e6383a;
-    color: white;
-    width: 300px;
-    height: 40px;
-    border-radius: 10px;
-    box-shadow: -2px 2px 3px 1px black;
-    position: relative;
-}
-
 
 .fondo {
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    background-attachment: fixed;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-attachment: fixed;
 }
 
 .bandaLogo {
-    display: flex;
-    width: 100%;
-    height: 160px;
-    background-color: #b24443;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 3123px 5px 2px grey;
+  display: flex;
+  width: 100%;
+  height: 160px;
+  background-color: #b24443;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3123px 5px 2px grey;
 }
-  
+
 .bandaLogo img {
-    height: 125px;
-    width: 260px;
+  height: 125px;
+  width: 260px;
 }
 
 .bandaAportes {
-    display: flex;
-    z-index: 1;
-    height: 110px;
-    width: 100%;
-    align-items: center;
-    font-size: 25px;
-    justify-content: center;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    padding-top: 10px;
+  display: flex;
+  z-index: 1;
+  height: 110px;
+  width: 100%;
+  align-items: center;
+  font-size: 25px;
+  justify-content: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding-top: 10px;
 }
 
 #aportes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('../../assets/fondoMadera.png');
-    background-size: 100% 100%;
-    width: 100%;
-    height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/fondoMadera.png");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 370px;
 }
 
 .cajaAportes {
-    width: 50%;
-    text-align: center;
+  width: 50%;
+  text-align: center;
 }
 
 .opcionAporte {
-    display: flex;
-    cursor: 'pointer';
-    height: 140px;
-    width: 400px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: -2px 2px 5px 2px black;
+  display: flex;
+  cursor: "pointer";
+  height: 140px;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -2px 2px 5px 2px black;
 }
 
 .opcionAporte a {
-    display: flex;
-    text-decoration: none;
-    color: black
-}
-
-#cafecito h4{
-    
+  display: flex;
+  text-decoration: none;
+  color: black;
 }
 
 .opcionAporte img {
-    height: 55px;
+  height: 55px;
 }
 
-/* @media (min-width: 901px) and (max-width:1300px) {
-    .home {
-        background-image: url('../../assets/fondoTablet.png');
-        
-    }
-} */
+@media only screen and (max-width: 731px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    padding-left: 0px;
+  }
 
-/* @media (max-width:1200px) {
-    .home {
-        background-image: url('../../assets/fondoHomeMobile.png');
-        
-    }
-}  */
+  .home p {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    width: 80%;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  #youtube {
+      font-size: 18px;
+      width: 180px;
+      height: 50px;
+      margin-top: 30px;
+  }
+
+  #aportes {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .bandaLogo {
+    margin-top: 60px;
+  }
+  .cajaAportes {
+    width: 100%;
+    text-align: center;
+    
+  }
+
+  .opcionAporte {
+    height: 80px;
+    width: 200px;
+    font-size: 12px;
+  }
+
+  .opcionAporte img {
+      margin-right: 5px;
+  }
+}

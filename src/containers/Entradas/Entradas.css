@@ -91,5 +91,40 @@
     height: 150px;
     width: 220px;
     margin: 0 40px;
-    border: 2px solid black;
 }
+
+#loader {
+    display: flex;
+    margin: 30px auto;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 731px) {
+
+    .banda3 {
+      margin-top: 60px;
+    }
+
+    #suscribite {
+        width: 70%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #suscribite input {
+        width: 94%;
+        margin-bottom: 10px
+    }
+
+    #suscribite button {
+        width: 100%
+    }
+
+    .singleEntrada {
+        flex-direction: column;
+    }
+
+    .singleEntrada img {
+        display: none;
+    }
+  }

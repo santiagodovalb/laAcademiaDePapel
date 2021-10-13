@@ -33,7 +33,7 @@ export default function Home() {
           alrededores (?), <br /> te va a gustar lo que hacemos.
         </p>
           <a href="https://www.youtube.com/channel/UCH08pslY37XMeJU3_fSyN1A" target='_blank' rel="noreferrer">
-          <button type='button' id='youtube'>ir al canal de youtube</button>
+          <button type='button' id='youtube'>ir al canal de YouTube</button>
           </a>
           <img src={fondoTransparente} alt='dibujos' />
       </div>
