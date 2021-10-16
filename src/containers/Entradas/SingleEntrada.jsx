@@ -13,14 +13,14 @@ export default function SingleEntrada({ entradas }) {
                 return (
                     <div key={ids[index]} className='entradas'>
                         <div className='singleEntrada'>
-                            <img src={data.imagen || 'https://i.stack.imgur.com/y9DpT.jpg'} alt='placeholder' />
+                            <img src={data.imagen || 'https://i.stack.imgur.com/y9DpT.jpg'} alt='placeholder' className='imgEntrada' />
                             <div className='entradaContent'>
                                 <Link to={`/newsletter/${ids[index]}`}>
-                                    <h1>{data.titulo}</h1>
+                                    <h1 className='tituloEntrada'>{data.titulo}</h1>
                                 </Link>
-                                <h3>{data.fecha}</h3>
+                                <h3 className='fechaEntrada'>{data.fecha}</h3>
                                 <Link to={`/newsletter/${ids[index]}`}>
-                                    <p dangerouslySetInnerHTML={{ __html: `${data.contenido?.slice(0, 200)} ...`}}></p>
+                                    <p className='snippetEntrada' dangerouslySetInnerHTML={{ __html: `${data.contenido?.slice(0, 200)} ...`}}></p>
                                 </Link>
                             </div>
                         </div>

@@ -13,7 +13,16 @@ export default function Admin() {
 
     const user = useSelector(state => state.user)
 
-    useEffect(() => {}, [user])
+    useEffect(() => {
+    }, [user])
+
+    const handleKeyPress = (e) => {
+        if(e.key === 'Enter'){
+            let contenido = document.getElementById('contenidoTA')
+            contenido.value += '</br>'
+            setEntrada({...entrada, contenido: contenido.value})
+        }
+      }
 
     const handleClick = (e) => {
         let contenido = document.getElementById('contenidoTA')
@@ -66,7 +75,7 @@ export default function Admin() {
                     <button type='button' id='italica' onClick={handleClick} className='editText'><em>i</em></button>
                     <button type='button' id='link' onClick={handleClick} className='editText'>🔗</button>
                 </div>
-                <textarea onChange={handleChange} id='contenidoTA' name="contenido" rows="20" cols="120" />
+                <textarea onChange={handleChange} onKeyPress={handleKeyPress} id='contenidoTA' name="contenido" rows="20" cols="120" />
                 <button type='submit' id='submit'>ENVIAR </button>
             </form> : <h1>NO AUTORIZADO</h1>}
         </div>

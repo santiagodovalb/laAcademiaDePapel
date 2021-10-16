@@ -5,11 +5,12 @@
 
 #nosotres h3 {
     width: 50%;
-    margin: 70px auto;
-    font-size: 30px;
+    margin: 50px auto;
+    font-size: 22px;
     font-weight: 100;
     text-align: justify;
     text-justify: inter-word;
+    line-height: 1.7em;
 }
 
 .persona {
@@ -19,7 +20,7 @@
     padding: 20px;
     margin: 40px auto;
     color: #FFEBC9;
-    box-shadow: 10px 10px 2px 1px grey;
+    box-shadow: -2px 2px 5px black;
 }
 
 .banda {
@@ -61,6 +62,16 @@
 }
 
 @media only screen and (max-width: 731px) {
+
+    #nosotres h3 {
+        width: 80%;
+        margin: 50px auto;
+        font-size: 18px;
+        font-weight: 100;
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.7em;
+    }
 
     .banda {
         margin-top: 60px;

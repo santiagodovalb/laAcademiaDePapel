@@ -61,14 +61,18 @@
 .entradas {
     display: flex;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .singleEntrada {
     display: flex;
-    margin: 50px auto;
+    margin: 30px auto;
+    align-items: center;
     width: 80%;
-    padding-bottom: 25px;
-    border-bottom: 2px solid black;
+    padding: 25px 0px;
+    background-color: burlywood;
+    box-shadow: -2px 2px 5px black;
+    border-radius: 10px;
 }
 
 .singleEntrada h1 {
@@ -121,10 +125,27 @@
     }
 
     .singleEntrada {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .snippetEntrada {
+        display: none;
+    }
+
+    .singleEntrada h1 {
+        font-size: 25px;
+        margin: 0px 5px;
+        text-align: center;
     }
 
     .singleEntrada img {
-        display: none;
+        width: 150px;
+    }
+
+    .fechaEntrada {
+        text-align: center;
     }
   }
