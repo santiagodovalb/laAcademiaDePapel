@@ -27,10 +27,7 @@ export default function Home() {
       </div>
       <div className="home">
         <p>
-          Esto es La Academia de Papel, un canal de <br /> videos sobre
-          antropología, historia y ciencias <br /> sociales. Si sos docente,
-          estudiante o simplemente <br /> un apasionado del mundo y sus
-          alrededores (?), <br /> te va a gustar lo que hacemos.
+        Un espacio donde divagamos sobre antropología, historia y ciencias sociales. Si te apasiona todo lo que es el mundo social y sus alrededores, te va a gustar lo que hacemos :)
         </p>
           <a href="https://www.youtube.com/channel/UCH08pslY37XMeJU3_fSyN1A" target='_blank' rel="noreferrer">
           <button type='button' id='youtube'>ir al canal de YouTube</button>

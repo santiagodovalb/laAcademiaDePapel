@@ -26,6 +26,11 @@ export default function Navbar() {
     });
   }
 
+  const handleLinks = () => {
+    const sidebar = document.getElementById('sidebar')
+    sidebar.className = 'closed'
+  }
+
   const handleClick = () => {
     const sidebar = document.getElementById('sidebar')
     sidebar.className = sidebar.className === 'closed' ? 'open' : 'closed'
@@ -44,27 +49,27 @@ export default function Navbar() {
           <h1>☰</h1>
         </div>
         <div id='sidebar' className='closed'>
-        <Link className={location.pathname === "/nosotres" ? "active" : ""} to="/nosotres">
-            
-            NOSOTR3S
-          </Link>
+        
           <a
             href="/#aportes"
+            onClick={handleLinks}
           >
             APORTES
           </a>
 
           <a
             href="https://la-academia-de-papel.flashcookie.com/" target="_blank" rel="noreferrer"
+            onClick={handleLinks}
           >
            
-            COMPRAS
+            TIENDA
           </a>
 
           <Link
             className={location.pathname === "/newsletter" ? "active" : ""}
             to="/newsletter"
             id='linkNews'
+            onClick={handleLinks}
           >
            
             NEWSLETTER
@@ -73,9 +78,14 @@ export default function Navbar() {
           <Link
             className={location.pathname === "/contacto" ? "active" : ""}
             to="/contacto"
+            onClick={handleLinks}
           >
           
             CONTACTO
+          </Link>
+          <Link className={location.pathname === "/nosotres" ? "active" : ""} to="/nosotres" onClick={handleLinks}>
+            
+            NOSOTR3S
           </Link>
           {user.email && <Link
             className={location.pathname === "/about" ? "active" : ""}
@@ -86,12 +96,10 @@ export default function Navbar() {
           </Link>}
         </div>
         <div className="links">
-          <Link className={location.pathname === "/nosotres" ? "active" : ""} to="/nosotres">
-            
-            NOSOTR3S
-          </Link>
+          
           <a
             href="/#aportes"
+            onClick={handleLinks}
           >
             APORTES
           </a>
@@ -100,7 +108,7 @@ export default function Navbar() {
             href="https://la-academia-de-papel.flashcookie.com/" target="_blank" rel="noreferrer"
           >
            
-            COMPRAS
+            TIENDA
           </a>
 
           <Link
@@ -118,6 +126,10 @@ export default function Navbar() {
           >
           
             CONTACTO
+          </Link>
+          <Link className={location.pathname === "/nosotres" ? "active" : ""} to="/nosotres">
+            
+            NOSOTR3S
           </Link>
           {user.email && <Link
             className={location.pathname === "/about" ? "active" : ""}

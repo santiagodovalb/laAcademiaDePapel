@@ -33,3 +33,46 @@
 #entradaContent h3 {
     margin-bottom: 50px;
 }
+
+.entradaImg {
+    height: 200px;
+}
+
+#entradaHeader {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#entradaInfo h3 {
+    font-weight: normal;
+}
+
+@media only screen and (max-width: 731px) {
+
+    #entradaContent {
+        padding: 50px 30px;
+    }
+    
+    #bandaEntrada {
+        margin-top: 60px;
+    }
+
+    #bandaEntrada h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    #entradaContent img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #entradaInfo h3 {
+        text-align: center;
+    }
+
+    #entradaContent p {
+        font-size: 17px;
+    }
+}

@@ -24,6 +24,13 @@
   margin-left: 50px
 }
 
+#webBy {
+  text-decoration: none;
+}
+
+#webBy:hover {
+  text-decoration: underline;
+}
 
 .social {
     display: flex;
@@ -44,6 +51,10 @@
     margin: 0px;
   }
   
+  #webBy {
+    margin: 0px;
+  }
+
   #footerText p {
     width: 100%;
     margin: 5px 0px;
@@ -52,7 +63,6 @@
 
   #webBy {
     width: 100%;
-    margin-top: 10px;
   }
 
   .social {

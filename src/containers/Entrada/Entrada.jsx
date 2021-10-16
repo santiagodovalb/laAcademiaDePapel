@@ -29,8 +29,12 @@ export default function Entrada() {
       </div>
       <div id='entradaContent'>
       {user.email && <button type='button' onClick={handleClick}>EDITAR ENTRADA</button>}
-        <h3>{entrada.fecha}</h3>
-        <h3>Por {entrada.autor}</h3>
+          
+          <img src={entrada.imagen} alt='imagen de entrada' className='entradaImg'/>
+          <div id='entradaInfo'>
+            <h3><b>{entrada.fecha}</b> | Por {entrada.autor}</h3>
+          </div>
+        
         <p dangerouslySetInnerHTML={{ __html: entrada.contenido}}></p>
       </div>
     </div>
