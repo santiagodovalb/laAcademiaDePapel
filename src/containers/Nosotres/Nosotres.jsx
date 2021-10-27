@@ -8,7 +8,7 @@ export default function Nosotres() {
   return (
     <div id="nosotres">
       <div className="banda">
-        <h1>Nosotr3s</h1>
+        <h1>Nosotres</h1>
       </div>
       <h3>
         <b>La Academia de papel</b> es un lugar donde compartir lo que
