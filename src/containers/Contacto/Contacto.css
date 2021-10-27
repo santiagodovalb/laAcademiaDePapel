@@ -81,4 +81,8 @@
   .bandaContacto {
     margin-top: 60px;
   }
+
+  #contacto form {
+    width: 80%;
+  }
 }

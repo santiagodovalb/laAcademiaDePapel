@@ -57,13 +57,13 @@ export default function Navbar() {
             APORTES
           </a>
 
-          <a
+          {/* <a
             href="https://la-academia-de-papel.flashcookie.com/" target="_blank" rel="noreferrer"
             onClick={handleLinks}
           >
            
             TIENDA
-          </a>
+          </a> */}
 
           <Link
             className={location.pathname === "/newsletter" ? "active" : ""}
@@ -85,7 +85,7 @@ export default function Navbar() {
           </Link>
           <Link className={location.pathname === "/nosotres" ? "active" : ""} to="/nosotres" onClick={handleLinks}>
             
-            NOSOTR3S
+            NOSOTRES
           </Link>
           {user.email && <Link
             className={location.pathname === "/about" ? "active" : ""}
@@ -103,13 +103,13 @@ export default function Navbar() {
           >
             APORTES
           </a>
-
+{/* 
           <a
             href="https://la-academia-de-papel.flashcookie.com/" target="_blank" rel="noreferrer"
           >
            
             TIENDA
-          </a>
+          </a> */}
 
           <Link
             className={location.pathname === "/newsletter" ? "active" : ""}
@@ -129,7 +129,7 @@ export default function Navbar() {
           </Link>
           <Link className={location.pathname === "/nosotres" ? "active" : ""} to="/nosotres">
             
-            NOSOTR3S
+            NOSOTRES
           </Link>
           {user.email && <Link
             className={location.pathname === "/about" ? "active" : ""}
