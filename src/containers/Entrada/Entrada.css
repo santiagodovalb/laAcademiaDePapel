@@ -35,7 +35,7 @@
 }
 
 .entradaImg {
-    height: 200px;
+    height: 100px;
 }
 
 #entradaHeader {
@@ -66,6 +66,7 @@
     #entradaContent img {
         display: block;
         margin: 0 auto;
+        height: 100px;
     }
 
     #entradaInfo h3 {
