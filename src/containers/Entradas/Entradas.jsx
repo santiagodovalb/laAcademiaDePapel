@@ -20,7 +20,6 @@ export default function Entradas() {
 
   return (
     <div id="newsletter">
-      {console.log(loading)}
       <div className="banda3">
         <h1>Newsletter</h1>
       </div>
