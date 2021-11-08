@@ -13,7 +13,7 @@ export default function Contacto() {
         setContacto({...contacto, [e.target.name]: e.target.value})
     }
 
-    const handleSumbit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
         emailjs.sendForm('service_vxcqpl8', "template_9j6dcjg", e.target, "user_7eLZl2OVI5XFLpYjSdZIp")
         .then(() => {
@@ -31,7 +31,7 @@ export default function Contacto() {
             <div className="bandaContacto">
                 <h1>Contacto</h1>
             </div>
-            <form onSubmit={handleSumbit}>
+            <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} type="text" name="email" placeholder="tu e-mail..."/>
                 <input onChange={handleChange} type="text" name="asunto" placeholder="asunto..."/>
                 <textarea onChange={handleChange} name="contenido" placeholder="tu comentario..."/>

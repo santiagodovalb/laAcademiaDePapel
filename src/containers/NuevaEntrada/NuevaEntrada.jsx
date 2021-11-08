@@ -1,55 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { collection, addDoc } from "firebase/firestore";
 import db from '../../firebase/firebasedb';
 import "./NuevaEntrada.css"
 import { useHistory } from 'react-router';
 import { useSelector } from 'react-redux';
+import useEntrada from '../../hooks/useEntrada';
 
 export default function Admin() {
 
     const history = useHistory()
 
-    const [entrada, setEntrada] = useState({})
+    const {handleClick, handleChange, handleKeyPress, entrada} = useEntrada('contenidoTA')
 
     const user = useSelector(state => state.user)
 
     useEffect(() => {
     }, [user])
 
-    const handleKeyPress = (e) => {
-        if(e.key === 'Enter'){
-            let contenido = document.getElementById('contenidoTA')
-            contenido.value += '</br>'
-            setEntrada({...entrada, contenido: contenido.value})
-        }
-      }
-
-    const handleClick = (e) => {
-        let contenido = document.getElementById('contenidoTA')
-        let text = contenido.value
-        let tag, endTag
-        if (e.target.id === 'negrita') {
-            tag = '<b>'
-            endTag = '</b>'
-        }
-        if (e.target.id === 'italica') {
-            tag = '<i>'
-            endTag = '</i>'
-        }
-        if (e.target.id === 'link') {
-            let link = prompt('Ingresar link')
-            tag = `<a href=${link} target='_blank'>`
-            endTag = '</a>'
-        }
-        contenido.value = text.slice(0, contenido.selectionStart) + tag + text.slice(contenido.selectionStart, contenido.selectionEnd) + endTag + text.slice(contenido.selectionEnd)
-        setEntrada({...entrada, contenido: contenido.value})
-    }
-
-    const handleChange = (e) => {
-        setEntrada({...entrada, [e.target.name]: e.target.value})
-    }
-
-    const handleSumbit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
         addDoc(collection(db, "entradas"), {...entrada, timestamp: Date.now()})
         .then(() => {
@@ -60,7 +28,7 @@ export default function Admin() {
     return (
         <div id='nuevaEntrada'>
             {user.email && <h1>NUEVA ENTRADA</h1>}
-            {user.email ? <form onSubmit={handleSumbit}>
+            {user.email ? <form onSubmit={handleSubmit}>
                 <label for="titulo">TITULO</label>
                 <input onChange={handleChange} type="text" name="titulo" />
                 <label for="titulo">AUTORX</label>
