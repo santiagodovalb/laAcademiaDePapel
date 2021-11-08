@@ -7,8 +7,8 @@ import fondoTransparente from "../../assets/fondoTransparente.png";
 import "animate.css";
 
 export default function Home() {
+
   const handleClick = (e) => {
-    console.log(e.target.id)
     if (e.target.id === "cafecito")
       window.open(`https://cafecito.app/laacademiadepapel`, "_blank");
     if (e.target.id === "patreon")

@@ -29,7 +29,7 @@ export default function Footer() {
         <div className='footer'>
             <div id='footerText'>
                 <p>la academia de papel™</p>
-                <a href='https://www.linkedin.com/in/santiagodovalb/' target='_blank' id='webBy'>
+                <a href='https://www.linkedin.com/in/santiagodovalb/' rel="noreferrer" target='_blank' id='webBy'>
                     <p id='webBy'>web: Santiago Doval</p>
                 </a>
             </div>

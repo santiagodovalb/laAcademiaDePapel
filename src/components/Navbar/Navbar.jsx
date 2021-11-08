@@ -9,51 +9,47 @@ import { useDispatch } from "react-redux";
 import { setUser } from "../../state/user";
 
 export default function Navbar() {
-  
   const location = useLocation();
-  const user = useSelector(state => state.user)
+  const user = useSelector((state) => state.user);
   const auth = getAuth();
-  const history = useHistory()
-  const dispatch = useDispatch()
+  const history = useHistory();
+  const dispatch = useDispatch();
 
   const handleSignout = () => {
-    signOut(auth).then(() => {
-      alert('Sign out exitoso')
-      dispatch(setUser({}))
-      history.push('/')
-    }).catch((error) => {
-      alert('Hubo un error')
-    });
-  }
+    signOut(auth)
+      .then(() => {
+        alert("Sign out exitoso");
+        dispatch(setUser({}));
+        history.push("/");
+      })
+      .catch((error) => {
+        alert("Hubo un error");
+      });
+  };
 
   const handleLinks = () => {
-    const sidebar = document.getElementById('sidebar')
-    sidebar.className = 'closed'
-  }
+    const sidebar = document.getElementById("sidebar");
+    sidebar.className = "closed";
+  };
 
   const handleClick = () => {
-    const sidebar = document.getElementById('sidebar')
-    sidebar.className = sidebar.className === 'closed' ? 'open' : 'closed'
-    console.log(sidebar.className)
-  }
+    const sidebar = document.getElementById("sidebar");
+    sidebar.className = sidebar.className === "closed" ? "open" : "closed";
+  };
 
   return (
     <div>
       <div className="topnav">
         <div id="logo">
-          <Link to='/'>
-              <img src={logo} alt="logo"  />
+          <Link to="/">
+            <img src={logo} alt="logo" />
           </Link>
         </div>
-        <div id='mobileNav' onClick={handleClick}>
+        <div id="mobileNav" onClick={handleClick}>
           <h1>☰</h1>
         </div>
-        <div id='sidebar' className='closed'>
-        
-          <a
-            href="/#aportes"
-            onClick={handleLinks}
-          >
+        <div id="sidebar" className="closed">
+          <a href="/#aportes" onClick={handleLinks}>
             APORTES
           </a>
 
@@ -68,10 +64,9 @@ export default function Navbar() {
           <Link
             className={location.pathname === "/newsletter" ? "active" : ""}
             to="/newsletter"
-            id='linkNews'
+            id="linkNews"
             onClick={handleLinks}
           >
-           
             NEWSLETTER
           </Link>
 
@@ -80,30 +75,29 @@ export default function Navbar() {
             to="/contacto"
             onClick={handleLinks}
           >
-          
             CONTACTO
           </Link>
-          <Link className={location.pathname === "/nosotres" ? "active" : ""} to="/nosotres" onClick={handleLinks}>
-            
-            NOSOTRES
-          </Link>
-          {user.email && <Link
-            className={location.pathname === "/about" ? "active" : ""}
-            to="/nuevaentrada"
-          >
-          
-            NUEVA ENTRADA
-          </Link>}
-        </div>
-        <div className="links">
-          
-          <a
-            href="/#aportes"
+          <Link
+            className={location.pathname === "/nosotres" ? "active" : ""}
+            to="/nosotres"
             onClick={handleLinks}
           >
+            NOSOTRES
+          </Link>
+          {user.email && (
+            <Link
+              className={location.pathname === "/about" ? "active" : ""}
+              to="/nuevaentrada"
+            >
+              NUEVA ENTRADA
+            </Link>
+          )}
+        </div>
+        <div className="links">
+          <a href="/#aportes" onClick={handleLinks}>
             APORTES
           </a>
-{/* 
+          {/* 
           <a
             href="https://la-academia-de-papel.flashcookie.com/" target="_blank" rel="noreferrer"
           >
@@ -114,9 +108,8 @@ export default function Navbar() {
           <Link
             className={location.pathname === "/newsletter" ? "active" : ""}
             to="/newsletter"
-            id='linkNews'
+            id="linkNews"
           >
-           
             NEWSLETTER
           </Link>
 
@@ -124,22 +117,28 @@ export default function Navbar() {
             className={location.pathname === "/contacto" ? "active" : ""}
             to="/contacto"
           >
-          
             CONTACTO
           </Link>
-          <Link className={location.pathname === "/nosotres" ? "active" : ""} to="/nosotres">
-            
+          <Link
+            className={location.pathname === "/nosotres" ? "active" : ""}
+            to="/nosotres"
+          >
             NOSOTRES
           </Link>
-          {user.email && <Link
-            className={location.pathname === "/about" ? "active" : ""}
-            to="/nuevaentrada"
-          >
-          
-            NUEVA ENTRADA
-          </Link>}
+          {user.email && (
+            <Link
+              className={location.pathname === "/about" ? "active" : ""}
+              to="/nuevaentrada"
+            >
+              NUEVA ENTRADA
+            </Link>
+          )}
         </div>
-        {user.email && <button type='button' onClick={handleSignout}>DESLOGEAR ADMIN</button>}
+        {user.email && (
+          <button type="button" onClick={handleSignout}>
+            DESLOGEAR ADMIN
+          </button>
+        )}
       </div>
     </div>
   );

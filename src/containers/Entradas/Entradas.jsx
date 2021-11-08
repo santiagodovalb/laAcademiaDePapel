@@ -3,10 +3,8 @@ import db from "../../firebase/firebasedb";
 import { query, orderBy, collection, getDocs } from "firebase/firestore";
 import SingleEntrada from "./SingleEntrada";
 import Loader from "react-loader-spinner";
-import { AutoComplete } from "antd";
 
 export default function Entradas() {
-  const [loading, setLoading] = useState(true);
   const [entradas, setEntradas] = useState([]);
 
   useEffect(() => {
@@ -15,7 +13,6 @@ export default function Entradas() {
     getDocs(q)
       .then((entradas) => entradas.docs)
       .then(setEntradas)
-      .then(setLoading(false));
   }, []);
 
   return (

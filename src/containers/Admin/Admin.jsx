@@ -17,7 +17,6 @@ export default function Admin() {
     }
 
     const handleSumbit = (e) => {
-        console.log(login)
         e.preventDefault()
         signInWithEmailAndPassword(auth, login.email, login.password)
           .then(user => {
@@ -25,6 +24,7 @@ export default function Admin() {
             history.push('/nuevaentrada')
           })
           .catch((error) => {
+            alert('Hubo un error')
             console.log(error)
           });
         
@@ -35,9 +35,9 @@ export default function Admin() {
 
             <h1>ADMIN LOGIN</h1>
             <form onSubmit={handleSumbit}>
-                <label for="username">EMAIL</label>
+                <label htmlFor="username">EMAIL</label>
                 <input onChange={handleChange} type="text" name="email" />
-                <label for="password">CONTRASEÑA</label>
+                <label htmlFor="password">CONTRASEÑA</label>
                 <input onChange={handleChange} type="password" name="password" />
                 <button type='submit'>ENVIAR </button>
             </form>

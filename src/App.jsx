@@ -4,7 +4,6 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Home from './containers/Home/Home';
 import Nosotres from './containers/Nosotres/Nosotres';
 import Entradas from './containers/Entradas/Entradas';
-import Bancanos from './containers/Bancanos/Bancanos';
 import Footer from './components/Footer/Footer';
 import Admin from './containers/Admin/Admin';
 import NuevaEntrada from './containers/NuevaEntrada/NuevaEntrada'
@@ -36,8 +35,6 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/nosotres' component={Nosotres} />
-        <Route path='/aportes' component={Bancanos} />
-        <Route path='/compras' component={Entradas} />
         <Route exact path='/newsletter' component={Entradas} />
         <Route path='/newsletter/:id' component={Entrada} />
         <Route path='/edit/:id' component={EditEntrada} />
