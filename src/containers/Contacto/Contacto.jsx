@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router'
 import emailjs from 'emailjs-com'
 import './Contacto.css'
+const {REACT_APP_USER_ID, REACT_APP_TEMPLATE_ID} = process.env
 
 export default function Contacto() {
 
@@ -15,7 +16,7 @@ export default function Contacto() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        emailjs.sendForm('service_vxcqpl8', "template_9j6dcjg", e.target, "user_7eLZl2OVI5XFLpYjSdZIp")
+        emailjs.sendForm('service_vxcqpl8', REACT_APP_TEMPLATE_ID, e.target, REACT_APP_USER_ID)
         .then(() => {
             alert('Enviado con éxito!')
             history.push('/')
